@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "home-work-lesson-9-1"
+version = "0.1.0"
+description = ""
+authors = ["Gregory Salnikov <greengo86@mail.ru>"]
+readme = "README.md"
+packages = [{include = "home_work_lesson_9"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.3.0"
+black = "^26.1.0"
+mypy = "^1.19.1"
+isort = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 119
+exclude = ''' /( \ .git )/ '''
+
+[tool.isort]
+line_length = 119
+
+[tool.mypy]
+disallow_untyped_defs = true
+warn_return_any = true
+exclude = 'venv'
