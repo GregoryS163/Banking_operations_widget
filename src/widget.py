@@ -1,6 +1,6 @@
 import re
 
-from src.masks import get_mask_card_number, get_mask_account
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(card_or_scor: str) -> str:
@@ -12,11 +12,17 @@ def mask_account_card(card_or_scor: str) -> str:
     """
     if re.match(r"Сч", card_or_scor):
         score_number = int(card_or_scor.split()[-1])
-        return get_mask_account(score_number)
+        mask_account = get_mask_account(score_number)
+        return f'Счет {mask_account}'
 
     else:
-        card_number = int(card_or_scor.split()[-1])
-        return get_mask_card_number(card_number)
+        card_number_list = card_or_scor.split()
+        card_number = int(card_number_list[-1])
+        mask_card_number = get_mask_card_number(card_number)
+        if len(card_number_list) == 3:
+            return f'{card_number_list[0]} {card_number_list[1]} {mask_card_number}'
+        else:
+            return f'{card_number_list[0]} {mask_card_number}'
 
 
 def get_date(date_information: str) -> str:
