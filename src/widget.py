@@ -37,4 +37,6 @@ def get_date(date_information: str) -> str:
     match = re.search(date_pattern, date_information)
     if match:
         year, month, day = match.groups()
-    return f"{day}.{month}.{year}"
+        return f"{day}.{month}.{year}"
+    else:
+        return "Передан не корректный формат даты"
