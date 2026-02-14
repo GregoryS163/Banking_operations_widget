@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "home-work-lesson-9-1"
+name = "Banking-operations-widget"
 version = "0.1.0"
 description = ""
 authors = ["Gregory Salnikov <greengo86@mail.ru>"]
 readme = "README.md"
-packages = [{include = "home_work_lesson_9"}]
+packages = [{include = "Banking_operations_widget"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"

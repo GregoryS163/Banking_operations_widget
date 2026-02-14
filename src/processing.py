@@ -1,15 +1,15 @@
 from datetime import datetime
 
 
-def filter_by_state(state_info: list[dict], state: str = "EXECUTED") -> list[dict]:
+def filter_by_state(transactions: list[dict], state: str = "EXECUTED") -> list[dict]:
     """
-    :param state_info: принимает список словарей по типу:
+    :param transactions: принимает список словарей по типу:
         [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},...]
     :param state: значение для ключа 'state'
     :return: новый список словарей, содержащий только те словари, у которых ключ 'state'
         соответствует указанному значению
     """
-    return [item for item in state_info if item.get("state") == state]
+    return [item for item in transactions if item.get("state") == state]
 
 
 def sort_by_date(transactions: list[dict], reverse_order: bool = True) -> list[dict]:
