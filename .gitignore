@@ -3,6 +3,8 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+draft.py
+
 # C extensions
 *.so
 
@@ -37,7 +39,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
+#htmlcov/
 .tox/
 .nox/
 .coverage
