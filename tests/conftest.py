@@ -153,3 +153,25 @@ def transactions_rub():
             "to": "Счет 14211924144426031657",
         },
     ]
+
+
+# Фикстуры для external_api.get_transaction_amount_rub
+
+@pytest.fixture()
+def rub_transaction():
+    return {
+        "operationAmount": {
+            "amount": "1000",
+            "currency": {"code": "RUB"}
+        }
+    }
+
+
+@pytest.fixture()
+def usd_transaction():
+    return {
+        "operationAmount": {
+            "amount": "50",
+            "currency": {"code": "USD"}
+        }
+    }
