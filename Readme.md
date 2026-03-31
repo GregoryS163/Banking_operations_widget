@@ -34,23 +34,35 @@ git@github.com:GregoryS163/Banking_operations_widget.git
 ## «Dependencies»
 
 Python: Version 3.12
-black	26.1.0
+Pygments	2.19.2
+certifi	2026.2.25
+charset-normalizer	3.4.6
 click	8.3.1
 colorama	0.4.6
-flake8	7.3.0
-isort	7.0.0
+coverage	7.13.4
+et_xmlfile	2.0.0
+idna	3.11
+iniconfig	2.3.0
 librt	0.7.8
 mccabe	0.7.0
-mypy	1.19.1
-mypy_extensions	1.1.0
+numpy	2.4.3
+openpyxl	3.1.5
 packaging	26.0
+pandas	3.0.1
 pathspec	1.0.4
-pip	25.3	26.0.1
+pip	25.3	
 platformdirs	4.5.1
+pluggy	1.6.0
 pycodestyle	2.14.0
 pyflakes	3.4.0
+python-dateutil	2.9.0.post0
+python-dotenv	1.2.2
 pytokens	0.4.1
+requests	2.32.5
+six	1.17.0
 typing_extensions	4.15.0
+tzdata	2025.3
+urllib3	2.6.3
 
 ### Установка зависимостей проекта
 
