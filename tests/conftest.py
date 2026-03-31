@@ -175,3 +175,14 @@ def usd_transaction():
             "currency": {"code": "USD"}
         }
     }
+
+
+# Для finance_file_reader.py
+
+@pytest.fixture
+def sample_csv_data():
+    """Фикстура с примерами CSV-данных."""
+    return [
+        {'id': 1, 'amount': 100.0, 'date': '2026-01-01'},
+        {'id': 2, 'amount': 200.0, 'date': '2026-01-02'}
+    ]
