@@ -38,7 +38,7 @@ def sorted_by_date():
 
 
 @pytest.fixture
-def sorted_by_date_rev_false():
+def sorted_by_date_reverse_false():
     return [
         {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
         {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
@@ -185,4 +185,37 @@ def sample_csv_data():
     return [
         {'id': 1, 'amount': 100.0, 'date': '2026-01-01'},
         {'id': 2, 'amount': 200.0, 'date': '2026-01-02'}
+    ]
+
+
+@pytest.fixture
+def sample_transactions():
+    return [
+        {'id': 650703.0, 'state': 'EXECUTED', 'date': '2023-09-05T11:30:32Z', 'amount': 16210.0, 'currency_name': 'Sol',
+         'currency_code': 'PEN', 'from': 'Счет 58803664561298323391', 'to': 'Счет 39745660563456619397',
+         'description': 'Перевод организации'},
+        {'id': 3598919.0, 'state': 'EXECUTED', 'date': '2020-12-06T23:00:58Z', 'amount': 29740.0,
+         'currency_name': 'Peso', 'currency_code': 'COP', 'from': 'Discover 3172601889670065',
+         'to': 'Discover 0720428384694643', 'description': 'Перевод с карты на карту'},
+        {'id': 593027.0, 'state': 'CANCELED', 'date': '2023-07-22T05:02:01Z', 'amount': 30368.0,
+         'currency_name': 'Shilling', 'currency_code': 'TZS', 'from': 'Visa 1959232722494097',
+         'to': 'Visa 6804119550473710', 'description': 'Перевод с карты на карту'},
+        {'id': 5429839.0, 'state': 'CANCELED', 'date': '2023-06-23T19:46:34Z', 'amount': 25261.0,
+         'currency_name': 'Hryvnia', 'currency_code': 'UAH', 'from': None, 'to': 'Счет 76768135089446747029',
+         'description': 'Открытие вклада'}
+    ]
+
+
+@pytest.fixture
+def sample_transactions_executed():
+    return [
+        {'id': 650703.0, 'state': 'EXECUTED', 'date': '2023-09-05T11:30:32Z', 'amount': 16210.0, 'currency_name': 'Sol',
+         'currency_code': 'PEN', 'from': 'Счет 58803664561298323391', 'to': 'Счет 39745660563456619397',
+         'description': 'Перевод организации'},
+        {'id': 3598919.0, 'state': 'EXECUTED', 'date': '2020-12-06T23:00:58Z', 'amount': 29740.0,
+         'currency_name': 'Peso', 'currency_code': 'COP', 'from': 'Discover 3172601889670065',
+         'to': 'Discover 0720428384694643', 'description': 'Перевод с карты на карту'},
+        {'id': 593027.0, 'state': 'CANCELED', 'date': '2023-07-22T05:02:01Z', 'amount': 30368.0,
+         'currency_name': 'Shilling', 'currency_code': 'TZS', 'from': 'Visa 1959232722494097',
+         'to': 'Visa 6804119550473710', 'description': 'Перевод с карты на карту'}
     ]
