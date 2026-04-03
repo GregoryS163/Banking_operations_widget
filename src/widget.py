@@ -15,12 +15,25 @@ def mask_account_card(card_or_account: str) -> str:
     card_or_account_list = card_or_account.split()
 
     if card_or_account.startswith(("Счёт", "Счет")) and len(card_or_account_list) == 2:
-        account_number = int(card_or_account_list[-1])
+        account_number = card_or_account_list[-1]
         mask_account = get_mask_account(account_number)
         return f"{card_or_account_list[0]} {mask_account}"
 
-    elif card_or_account.startswith(("Maestro", "MasterCard", "Visa Classic", "Visa Platinum", "Visa Gold")):
-        card_number = int(card_or_account_list[-1])
+    elif card_or_account.startswith(
+        (
+            "МИР",
+            "American Express",
+            "Discover",
+            "Maestro",
+            "MasterCard",
+            "Mastercard",
+            "Visa",
+            "Visa Classic",
+            "Visa Platinum",
+            "Visa Gold",
+        )
+    ):
+        card_number = card_or_account_list[-1]
         mask_card_number = get_mask_card_number(card_number)
         if len(card_or_account_list) == 3:
             return f"{card_or_account_list[0]} {card_or_account_list[1]} {mask_card_number}"

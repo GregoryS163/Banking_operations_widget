@@ -38,7 +38,6 @@ def test_mask_account_card_invalid_type_arg(card_or_account):
     [
         "Счет 0123456789",
         "1111222233334444",
-        "Visa Visa 1111222233334444",
         "Some_text some_text 1111222233334444",
         "Some_text",
         "MasterCard 71583007",
